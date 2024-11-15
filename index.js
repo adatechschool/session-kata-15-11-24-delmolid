@@ -47,7 +47,7 @@ const encodeLatin = getLatinCharacterList (latin);
  let encodemorse= encodeLatin.map(char => latinToMorse[char])
   return encodemorse
 }
-console.log(encode("HELLO,WORLD", latinToMorse));
+// console.log(encode("HELLO,WORLD", latinToMorse));
 
 const morseToLatin = {
     '-': "T",
@@ -88,19 +88,19 @@ const morseToLatin = {
 
 
 function getMorseCharacterList (morse){
-    return morse.split('');
+    return morse;
   }
-  console.log(getMorseCharacterList('-..'));
+ //  console.log(getMorseCharacterList('-..'));
 
   function translateMorseCharacter (latin, morseToLatin){
     return morseToLatin[latin]
   }
-  console.log(translateMorseCharacter("-..", morseToLatin));
+   console.log(translateMorseCharacter("-..", morseToLatin));
 
 function decode (morse,morseToLatin){
-    const decodeLatin = getMorseCharacterList (morse);
+    const decodeLatin = getMorseCharacterList(morse);
      let decodemorse= decodeLatin.map(char => morseToLatin[char])
       return decodemorse
     }
-    console.log(decode('.', morseToLatin));
+    console.log(decode(".-..", morseToLatin));
 
